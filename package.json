@@ -2,8 +2,21 @@
   "name": "welcome-page",
   "version": "0.0.1",
   "description": "Small responsive homepage",
-  "main": "index.js",
+  "main": "dist/index.html",
   "repository": "git@github.com:wiiitek/welcome-page.git",
   "license": "UNLICENSED",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "concurrently --kill-others \"node scripts/watch.js\" \"node scripts/livereload.js\"",
+    "watch": "node scripts/watch.js",
+    "livereload": "node scripts/livereload.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "fs": "^0.0.1-security",
+    "live-server": "^1.2.2",
+    "path": "^0.12.7",
+    "pug": "^3.0.2",
+    "recursive-watch": "^1.1.4"
+  }
 }
