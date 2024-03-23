@@ -7,16 +7,18 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "start": "concurrently --kill-others \"node scripts/watch.js\" \"node scripts/livereload.js\"",
-    "watch": "node scripts/watch.js",
-    "livereload": "node scripts/livereload.js"
+    "start": "webpack serve --mode=development",
+    "build": "webpack --mode=production --progress",
+    "preview": "npm run build && http-server dist -og"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
-    "fs": "^0.0.1-security",
-    "live-server": "^1.2.2",
-    "path": "^0.12.7",
-    "pug": "^3.0.2",
-    "recursive-watch": "^1.1.4"
+    "css-loader": "^6.10.0",
+    "http-server": "^14.1.1",
+    "pug-plugin": "^5.1.0",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
   }
 }
