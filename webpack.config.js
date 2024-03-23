@@ -2,12 +2,15 @@ const path = require('path');
 const PugPlugin = require('pug-plugin');
 
 module.exports = {
+  stats: 'minimal',
+
   entry: {
     index: './src/views/index.pug',
     //☝🏽 Insert your PUG HTML files here
   },
   output: {
     path: path.join(__dirname, 'dist/'),
+    clean: true,
     publicPath: '/',
     filename: 'assets/js/[name].[contenthash:8].js'
     //☝🏽 Output filename of files with hash for unique id
@@ -62,7 +65,5 @@ module.exports = {
         usePolling: true
       }
     }
-  },
-  stats: 'errors-only'
-  //☝🏽 For a cleaner dev-server run
+  }
 };
