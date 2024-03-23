@@ -1,6 +1,10 @@
 const path = require('path');
 const PugPlugin = require('pug-plugin');
 
+// Try the environment variable, otherwise use root
+// useful for GitHub pages
+const CONTEXT_PATH = process.env.CONTEXT_PATH || '/';
+
 module.exports = {
   stats: 'minimal',
 
@@ -11,7 +15,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist/'),
     clean: true,
-    publicPath: '/',
+    publicPath: CONTEXT_PATH,
     filename: 'assets/js/[name].[contenthash:8].js'
     //☝🏽 Output filename of files with hash for unique id
   },

@@ -9,6 +9,8 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    env:
+      CONTEXT_PATH: '/welcome-page'
 
     steps:
       - uses: actions/checkout@v4
@@ -38,7 +40,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: welcome-page-dist
-          path: dist
+          path: dist/
       - name: List Current Folder
         run: ls -R
       - name: Deploy
