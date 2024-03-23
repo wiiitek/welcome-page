@@ -1,9 +1,0 @@
-{
-  "name": "welcome-page",
-  "version": "0.0.1",
-  "description": "Small responsive homepage",
-  "main": "index.js",
-  "repository": "git@github.com:wiiitek/welcome-page.git",
-  "license": "UNLICENSED",
-  "private": true
-}
