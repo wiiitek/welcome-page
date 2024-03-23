@@ -1,0 +1,51 @@
+name: Continuous Delivery
+
+on:
+  push:
+    branches-ignore:
+      - gh-pages
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Yarn Install
+        run: |
+          yarn install
+      - name: Build
+        run: |
+          yarn build
+      - name: Archive built project
+        uses: actions/upload-artifact@v4
+        with:
+          name: welcome-page-dist
+          path: dist
+          retention-days: 1
+
+  deploy:
+    # make it work with skipped jobs: https://github.com/github/docs/issues/4822#issuecomment-826617890
+    if: ${{ (github.ref == 'refs/heads/main') && !failure() && !cancelled() }}
+    needs: [build]
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download Build Project
+        uses: actions/download-artifact@v4
+        with:
+          name: welcome-page-dist
+          path: dist
+      - name: List Current Folder
+        run: ls -R
+      - name: Deploy
+        # https://github.com/JamesIves/github-pages-deploy-action#configuration-
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        with:
+          repository-name: wiiitek/welcome-page
+          branch: gh-pages
+          folder: ./dist
+          token: ${{ secrets.GH_TOKEN }}
