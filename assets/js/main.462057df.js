@@ -1,0 +1,1 @@
+addEventListener("DOMContentLoaded",(e=>{document.getElementById("domain").innerText="@example.com"}));
