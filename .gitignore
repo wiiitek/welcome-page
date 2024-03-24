@@ -4,3 +4,6 @@
 # Generated sources
 /dist/*
 !/dist/.gitkeep
+
+# Unwanted system files
+.DS_Store
