@@ -3,10 +3,30 @@
 @import '../libs/Skeleton-2.0.4/css/normalize.css';
 @import '../libs/Skeleton-2.0.4/css/skeleton.css';
 
-body {
+h1 {
     font-family: Cantarell, Verdana, Tahoma, sans-serif;
+    text-align: center;
 }
 
 .scaled {
     max-width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.with-bg-image {
+    color: whitesmoke;
+    background-color: rgba(74, 174, 174, 0.4);
+    background-image: url('../assets/images/xx_800.jpeg');
+    // https://www.w3schools.com/html/html_images_background.asp#midcontentadcontainer
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.red {
+    background-color: rgba(231, 187, 187, 0.6);
+    background-blend-mode: luminosity;
 }
