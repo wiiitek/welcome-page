@@ -5,5 +5,5 @@
 /dist/*
 !/dist/.gitkeep
 
-# Unwanted system files
+# System files
 .DS_Store
