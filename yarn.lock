@@ -1319,10 +1319,10 @@ hpack.js@^2.1.6:
     readable-stream "^2.0.1"
     wbuf "^1.1.0"
 
-html-bundler-webpack-plugin@3.7.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/html-bundler-webpack-plugin/-/html-bundler-webpack-plugin-3.7.0.tgz#b4129cda0ce67ebd1c250159f2cd0ddf2db25d8e"
-  integrity sha512-edH/q+dsBDEo8brqjnjkFjR5SNJNulJmN63U5hhmNkCPuj+7FsNvkcJxJMGBMViZvcFjNGh5hfZIiK2+l5/5Pw==
+html-bundler-webpack-plugin@3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/html-bundler-webpack-plugin/-/html-bundler-webpack-plugin-3.8.0.tgz#4c8e26379b0386e0b1cb5c5d1e27837d43a505e0"
+  integrity sha512-QxeFMhJdgpO3NcmBhwrI+LlNxKLFA8ECz17M6zw1P34DqQVy7jGv438ywVVobtnDy4CvbAVA3PZI13SagxYiog==
   dependencies:
     "@types/html-minifier-terser" "^7.0.2"
     ansis "2.0.3"
@@ -2183,13 +2183,13 @@ pug-parser@^6.0.0:
     pug-error "^2.0.0"
     token-stream "1.0.0"
 
-pug-plugin@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/pug-plugin/-/pug-plugin-5.1.0.tgz#9454aad2f4aab2ede0885364fe022fe50f2f1229"
-  integrity sha512-hRFfGfXhVU9crexeArTinGDXW08UCMVV/+wnkgfPFtyX2fIyt2mQ1530abrhkTWlxxqW0u9p/ab+vOhwOuz+PA==
+pug-plugin@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/pug-plugin/-/pug-plugin-5.2.0.tgz#bf320657c2d1fe22cbfb648bce955745c977e73a"
+  integrity sha512-bnVpPm6rc8gdx5pSBccAYCnORxXid7WZV0NTf+BlUM9YgYqZSwpSPWScNCi9u5RyoXXfPPz4BzvDSrRfgABiGQ==
   dependencies:
     ansis "2.0.3"
-    html-bundler-webpack-plugin "3.7.0"
+    html-bundler-webpack-plugin "3.8.0"
     js-beautify "^1.15.1"
     pug "3.0.2"
 
