@@ -3,28 +3,18 @@
 @import '../libs/Skeleton-2.0.4/css/normalize.css';
 @import '../libs/Skeleton-2.0.4/css/skeleton.css';
 
+@import 'layout.scss';
+
+$backgroundColor: #eee;
+$color: #333;
+
+body {
+    background-color: $backgroundColor;
+    color: $color;
+}
+
 h1 {
-    font-family: Cantarell, Verdana, Tahoma, sans-serif;
-    text-align: center;
-    font-weight: bold;
-}
-
-.scaled {
-    max-width: 100%;
-}
-
-.center {
-    text-align: center;
-}
-
-.with-bg-image {
-    color: whitesmoke;
-    background-color: rgba(74, 174, 174, 0.4);
-    background-image: url('../assets/images/xx_800.jpeg');
-    // https://www.w3schools.com/html/html_images_background.asp#midcontentadcontainer
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    font-family: Cardo, 'Times New Roman', Times, serif;
 }
 
 .red {
