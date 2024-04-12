@@ -1,0 +1,22 @@
+.hero {
+    margin: 7rem auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.with-bg-image {
+    color: whitesmoke;
+    background-color: rgba(74, 174, 174, 0.4);
+    background-image: url('../assets/images/xx_800.jpeg');
+    // https://www.w3schools.com/html/html_images_background.asp#midcontentadcontainer
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@media only screen and (min-width: 550px) {
+    .footer {
+        margin-top: 5rem;
+        text-align: center;
+    }
+}
